@@ -1,0 +1,14 @@
+<div>
+    <form [formGroup]="form">
+        <div class="ui-g">
+            <div *ngFor="let col of colsArray" class="ui-sm-12" [class]="'ui-g-' + (12/cols)">
+                <ng-template ngFor let-widget [ngForOf]="widgets">
+                    <ng-container *ngIf="widget.col === col" d1Widget
+                                  [data]="widget"
+                                  [form]="form">
+                    </ng-container>
+                </ng-template>
+            </div>
+        </div>
+    </form>
+</div>

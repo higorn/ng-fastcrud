@@ -1,0 +1,10 @@
+<div class="ui-helper-clearfix d1-actionbar">
+    <p-toolbar>
+        <div class="ui-toolbar-group-left">
+            <button pButton type="button" icon="fa-plus" (click)="add()" [disabled]="isAddDisabled()"></button>
+            <button pButton type="submit" icon="fa-save" (click)="save()" [disabled]="isSaveDisabled()"></button>
+            <button pButton type="button" icon="fa-trash" (click)="delete()" [disabled]="isDeleteDisabled()"></button>
+            <p-splitButton icon="fa-wrench"></p-splitButton>
+        </div>
+    </p-toolbar>
+</div>

@@ -1,0 +1,45 @@
+<div [formGroup]="form">
+
+    <div [ngSwitch]="field.controlType" class="d1-form-field-container">
+        <mat-form-field *ngSwitchCase="'textfield'">
+            <input matInput
+                   [id]="'df_' + field.key"
+                   [formControlName]="field.key"
+                   [placeholder]="field.label"
+                   [type]="field.type"
+                   [required]="field.required">
+        </mat-form-field>
+
+        <mat-form-field *ngSwitchCase="'textarea'">
+            <textarea matInput
+                      [id]="'df_' + field.key"
+                      [formControlName]="field.key"
+                      [placeholder]="field.label"
+                      [required]="field.required">
+            </textarea>
+        </mat-form-field>
+
+        <mat-form-field *ngSwitchCase="'dropdown'">
+            <mat-select [id]="'df_' + field.key"
+                        [formControlName]="field.key"
+                        [placeholder]="field.label">
+                <mat-option *ngFor="let opt of field.options" [value]="opt.key">{{opt.value}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <section *ngSwitchCase="'slider'">
+            <label [attr.for]="'df_' + field.key">{{field.label}}</label>
+            <mat-slider [id]="'df_' + field.key"
+                        [min]="field.min"
+                        [max]="field.max"
+                        [step]="field.step"
+                        [thumb-label]="field.thumbLabel"
+                        [vertical]="field.vertical"
+                        [value]="field.value">
+            </mat-slider>
+        </section>
+
+    </div>
+
+    <!--<div class="errorMessage" *ngIf="!isValid">{{field.label}} is required</div>-->
+</div>

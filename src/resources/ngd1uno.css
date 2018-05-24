@@ -1,0 +1,70 @@
+d1-list .selected {
+    background-color: #0392d2 !important;
+    color: white;
+}
+
+d1-list .mat-table {
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+d1-form .mat-grid-tile .mat-figure {
+    justify-content: baseline;
+    margin: 0 8px;
+}
+
+/*d1-form .ui-g-6,*/
+/*d1-form .ui-g-12 {*/
+    /*padding: 0;*/
+/*}*/
+
+.d1-form-field-container {
+    display: flex;
+    flex-direction: column;
+}
+.d1-form-field-container > *,
+.d1-form-field-container > * .mat-slider {
+    width: 100%;
+}
+
+.d1-form-field-container > * .mat-slider {
+    padding: 0;
+}
+.d1-form-field-container .mat-slider-horizontal .mat-slider-wrapper {
+    height: 2px;
+    top: 23px;
+    left: 0;
+    right: 0;
+}
+.d1-form-field-container label {
+    color: rgba(0,0,0,.54);
+}
+.d1-form-field-container label > .d1-form-field-required-marker {
+    padding-left: 4px;
+}
+.d1-form-field-container .mat-chip-list-stacked .mat-chip-list-wrapper .mat-chip:not(.mat-basic-chip) {
+    display: flex !important;
+}
+.d1-form-field-container .d1-input-list label {
+    width: 100%;
+}
+.d1-form-field-container .mat-chip-input {
+    width: 100%;
+}
+.d1-form-field-container .mat-form-field .mat-hint {
+    opacity: 0;
+    transform: translateY(-100%);
+    -webkit-transition: ease 200ms;
+    -moz-transition: ease 200ms;
+    -ms-transition: ease 200ms;
+    -o-transition: ease 200ms;
+    transition: ease 200ms;
+}
+.d1-form-field-container .mat-form-field .mat-hint.show-hint {
+    opacity: 1;
+    -webkit-transition: ease 200ms;
+    -moz-transition: ease 200ms;
+    -ms-transition: ease 200ms;
+    -o-transition: ease 200ms;
+    transition: ease 200ms;
+    transform: translateY(0%);
+}
